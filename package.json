@@ -1,0 +1,26 @@
+{
+  "name": "levi-chinese",
+  "version": "0.0.1",
+  "description": "Chinese support for Levi",
+  "author": "Adrian C Shum <adrian@cshum.com> (https://github.com/cshum)",
+  "main": "lib/levi-chinese.js",
+  "dependencies": {
+    "ginga": "^1.1.1",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {
+    "levi": "^1.4.0",
+    "rimraf": "^2.4.2",
+    "standard": "^5.1.0",
+    "tape": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cshum/levi-chinese.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/cshum/levi-chinese",
+  "scripts": {
+    "test": "standard && node test/test.js"
+  }
+}
