@@ -1,2 +1,1 @@
-var ginga = require('ginga')
-var xtend = require('xtend')
+module.exports.conversion = require('./conversion')
