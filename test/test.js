@@ -10,7 +10,7 @@ var lv = levi('db', {db: require('memdown')})
 .use(levi.stopword())
 
 test('pipeline', function (t) {
-  lv.pipeline('典載入方式靈活，無需配置詞典路徑也可使用，需要定制自己的詞典路徑時也可靈活定制', function (err, tokens) {
+  lv.pipeline('Re-thinking the JavaScript utility belt, 典載入方式靈活，無需配置詞典路徑也可使用，需要定制自己的詞典路徑時也可靈活定制', function (err, tokens) {
     t.notOk(err)
     t.deepEqual(tokens, [
       'includ', 'foo', 'abc', 'instanceof', 'constructor'
