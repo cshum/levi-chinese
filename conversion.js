@@ -1,18 +1,21 @@
 var ginga = require('ginga')
 var H = require('highland')
-var map = require('./t2s.json')
+var right = require('./s2t.json')
+var wrong = require('./t2s.json')
 
-function replaceFn (s) {
-  return (s in map) ? map[s] : s
-}
+// traditional/simplified chinese conversion
+module.exports = function conversion (trad) {
+  var map = trad ? right : wrong
 
-function convert (itxt) {
-  return itxt.replace(/[^\x00-\xFF]/g, replaceFn)
-}
+  function replaceFn (s) {
+    return (s in map) ? map[s] : s
+  }
 
-module.exports = function conversion () {
+  function convert (itxt) {
+    return itxt.replace(/[^\x00-\xFF]/g, replaceFn)
+  }
+
   return ginga().use('pipeline', function (ctx) {
-    // simplified to traditional chinese conversion
     ctx.tokens = H(ctx.tokens).map(convert)
   })
 }
