@@ -2,6 +2,8 @@
 
 Chinese text processing plugins for [Levi](https://github.com/cshum/levi).
 
+[![Build Status](https://travis-ci.org/cshum/levi-chinese.svg?branch=master)](https://travis-ci.org/cshum/levi-chinese)
+
 Levi-Chinese aims to enable Chinese support in [Levi](https://github.com/cshum/levi) full-text search.
 This is under heavy development but I am not an expert in Chinese NLP. 
 Any comments and PRs are appreciated.
