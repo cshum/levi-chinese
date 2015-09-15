@@ -1,6 +1,6 @@
 {
   "name": "levi-chinese",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Chinese support for Levi",
   "author": "Adrian C Shum <adrian@cshum.com> (https://github.com/cshum)",
   "main": "lib/levi-chinese.js",
