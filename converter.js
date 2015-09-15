@@ -5,7 +5,7 @@ var wrong = require('./t2s.json')
 var UNI = /[^\x00-\xFF]/g
 
 // traditional/simplified chinese conversion
-module.exports = function conversion (trad) {
+module.exports = function converter (trad) {
   var map = trad ? right : wrong
 
   function replaceFn (s) {
