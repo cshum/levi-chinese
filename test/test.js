@@ -28,7 +28,7 @@ test('Jieba Segmenter', function (t) {
       t.deepEqual(tokens, tokens1)
       lv.pipeline(tokens, function (err, tokens2) {
         t.notOk(err)
-        t.deepEqual(tokens, tokens1, 'idempotent')
+        t.deepEqual(tokens2, tokens, 'idempotent')
         t.end()
       })
     }
@@ -66,4 +66,24 @@ test('Mixed', function (t) {
       })
     }
   )
+
+})
+
+test('Search', function (t) {
+  lv.put('a', '我是拖拉機學院手扶拖拉機專業的')
+  lv.put('b', 'Lorem Ipsum is simply dummy text')
+  lv.put('c', '不用多久，我就會升職加薪，當上CEO，走上人生巔峰。', function (err) {
+    t.notOk(err)
+    lv.searchStream('你老板升職').toArray(function (arr) {
+      t.equal(arr.length, 1, 'correct length')
+      t.equal(arr[0].key, 'c', 'correct result')
+
+      lv.searchStream('拖拉機使用說明').toArray(function (arr) {
+        t.equal(arr.length, 1, 'correct length')
+        t.equal(arr[0].key, 'a', 'correct result')
+
+        t.end()
+      })
+    })
+  })
 })
