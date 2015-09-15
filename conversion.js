@@ -2,6 +2,7 @@ var ginga = require('ginga')
 var H = require('highland')
 var right = require('./s2t.json')
 var wrong = require('./t2s.json')
+var UNI = /[^\x00-\xFF]/g
 
 // traditional/simplified chinese conversion
 module.exports = function conversion (trad) {
@@ -11,8 +12,8 @@ module.exports = function conversion (trad) {
     return (s in map) ? map[s] : s
   }
 
-  function convert (itxt) {
-    return itxt.replace(/[^\x00-\xFF]/g, replaceFn)
+  function convert (str) {
+    return str.replace(UNI, replaceFn)
   }
 
   return ginga().use('pipeline', function (ctx) {
