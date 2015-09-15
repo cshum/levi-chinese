@@ -36,7 +36,7 @@ Based on dictionary from [Tongwen](http://tongwen.openfoundry.org/)
 
 ### chinese.segmenter()
 
-Chinese segmentation using [node-jieba](https://github.com/Tjatse/node-jieba).
+Chinese segmentation using [nodejieba](https://github.com/yanyiwu/nodejieba).
 
 ## License
 
