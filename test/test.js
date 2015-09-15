@@ -66,7 +66,6 @@ test('Mixed', function (t) {
       })
     }
   )
-
 })
 
 test('Search', function (t) {
