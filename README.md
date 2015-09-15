@@ -3,8 +3,8 @@
 Chinese text processing plugins for [Levi](https://github.com/cshum/levi).
 
 levi-chinese aims to improve Chinese text processing capabilities of Levi.
-This is under development and I am not very familiar with NLP in Chinese. 
-Any help would be appreciated.
+This is under heavy development and I am not an expert in NLP with Chinese. 
+Any comments or pull requests are appreciated.
 
 ```js
 var levi = require('levi')
@@ -24,7 +24,7 @@ Convert Traditional Chinese into Simplified Chinese text tokens.
 
 ### chinese.segmenter()
 
-Simplified Chinese segmentation using [node-jieba](https://github.com/Tjatse/node-jieba).
+Chinese segmentation using [node-jieba](https://github.com/Tjatse/node-jieba).
 
 ## License
 
