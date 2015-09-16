@@ -9,10 +9,10 @@ This is under active development but I am no expert in Chinese NLP.
 Any comments or PRs are appreciated.
 
 ```
-npm install levi
+npm install levi-chinese
 ```
 
-Levi Chinese contains text processing plugins `chinese.converter()` and `chinese.segmenter()`.
+Levi Chinese provides text processing plugins `chinese.converter()` and `chinese.segmenter()`.
 Mount them under the default plugins of Levi.
 
 ```js
