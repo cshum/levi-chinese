@@ -40,7 +40,8 @@ Based on dictionary from [Tongwen](http://tongwen.openfoundry.org/)
 
 ### chinese.segmenter()
 
-Chinese segmentation using [nodejieba](https://github.com/yanyiwu/nodejieba).
+Chinese words segmentation using [nodejieba](https://github.com/yanyiwu/nodejieba).
+This requires native bindings so it only works on Node.js.
 
 ## License
 
